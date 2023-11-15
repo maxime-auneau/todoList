@@ -1,0 +1,43 @@
+.buttons {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  justify-content: space-evenly;
+}
+
+.delete-button {
+  background-color: firebrick;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-family: "Roboto Light", sans-serif;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  width: 20%;
+  text-align: center;
+}
+
+.delete-button:hover {
+  background-color: #ff0000;
+}
+
+.tasks {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  width: 400px;
+  align-items: center;
+  .task-data {
+    width: 100%;
+    p {
+      text-align: center;
+      width: 100%;
+    }
+  }
+}
+
+.all-tasks {
+  display: flex;
+  justify-content: space-evenly;
+}

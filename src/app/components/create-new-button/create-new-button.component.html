@@ -1,0 +1,11 @@
+<div [ngClass]="task ? 'edit-button' : 'create-button' " (click)="openModal()">
+  {{ task ? 'Update' : 'New Task' }}
+</div>
+
+<app-create-modal *ngIf="isModalOpen"
+                  [isModalOpen]="isModalOpen"
+                  (closeModalEvent)="handleModalClose($event)"
+                  (taskCreated)="handleTaskCreation()"
+                  (taskUpdated)="handleTaskUpdate()"
+                  [task]="task ? task : null"
+></app-create-modal>

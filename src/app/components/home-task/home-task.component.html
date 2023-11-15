@@ -1,0 +1,49 @@
+<app-create-new-button
+  (taskCreated)="onTaskCreated()"
+></app-create-new-button>
+
+<div class="all-tasks">
+  <div *ngIf="tasksByStatus['PENDING'].length > 0" class="tasks">
+    <h3>Pending Tasks</h3>
+    <div *ngFor="let task of tasksByStatus['PENDING']" class="task-data">
+      <p>{{ task.title }} - {{ task.description }}</p>
+      <div class="buttons">
+        <div class="delete-button" (click)="task.id != null ? deleteTask(task.id) : null">
+          Delete
+        </div>
+        <app-create-new-button
+          [task]="task"
+          (taskUpdated)="onTaskUpdated()"
+        ></app-create-new-button>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="tasksByStatus['IN_PROGRESS'].length > 0" class="tasks">
+    <h3>In-Progress Tasks</h3>
+    <div *ngFor="let task of tasksByStatus['IN_PROGRESS']" class="task-data">
+      <p>{{ task.title }} - {{ task.description }}</p>
+      <div class="buttons">
+        <div class="delete-button" (click)="task.id != null ? deleteTask(task.id) : null">
+          Delete
+        </div>
+        <app-create-new-button
+          [task]="task"
+          (taskUpdated)="onTaskUpdated()"
+        ></app-create-new-button>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="tasksByStatus['COMPLETED'].length > 0" class="tasks">
+    <h3>Completed Tasks</h3>
+    <div *ngFor="let task of tasksByStatus['COMPLETED']" class="task-data">
+      <p>{{ task.title }} - {{ task.description }}</p>
+      <div class="buttons">
+        <div class="delete-button" (click)="task.id != null ? deleteTask(task.id) : null">
+          Delete
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

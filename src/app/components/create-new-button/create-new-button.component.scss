@@ -1,0 +1,35 @@
+.create-button {
+  margin: 0;
+  padding: 10px;
+  background-color: blueviolet;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  width: 100px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  font-family: "Roboto Light", sans-serif;
+}
+
+.edit-button {
+  background-color: darkgreen;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-family: "Roboto Light", sans-serif;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  text-align: center;
+}
+
+.edit-button:hover {
+  background-color: green;
+}
+
